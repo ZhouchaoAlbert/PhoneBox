@@ -57,18 +57,26 @@ void InitSkinEngine(HWND hwndParent, int string_size, char *variables, stack_t *
 
 void ShowInstallSkin(HWND hwndParent, int string_size, char *variables, stack_t **stacktop, extra_parameters *extra)
 {
+	//Æ¤·ôÎÄ¼þ
 	TCHAR skinLayoutFileName[MAX_PATH];		
 	ZeroMemory(skinLayoutFileName, MAX_PATH);
-	popstring(skinLayoutFileName); //Æ¤·ôÎÄ¼þ
-
+	popstring(skinLayoutFileName); 
+	
+	//Í¼Æ¬
 	TCHAR szIcon[MAX_PATH];
 	ZeroMemory(szIcon, MAX_PATH);
-	popstring(szIcon); //Í¼Æ¬
+	popstring(szIcon); 
+	
+	//Ãû×Ö
+	TCHAR szName[MAX_PATH];
+	ZeroMemory(szName, MAX_PATH);
+	popstring(szName); 
+
 	g_pFrame = new DuiLib::CSkinEngine();
 	if (g_pFrame == NULL) 
 		return;
 	g_pFrame->SetSkinXMLPath(skinLayoutFileName);
-	g_pFrame->Create(NULL, _T("EC 10.0"), WS_POPUPWINDOW, 0, 0, 0, 0, 0);
+	g_pFrame->Create(NULL, szName, WS_POPUPWINDOW, 0, 0, 0, 0, 0);
 	g_pFrame->CenterWindow();
 	HICON hIcon = (HICON)LoadImage(g_hInstance, szIcon, IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
 	g_pFrame->SetIconPic(hIcon);
@@ -532,7 +540,7 @@ void  SetPercentValue(HWND hwndParent, int string_size, char *variables, stack_t
 	if (_wtoi(provalue) > 1)
 	{
 		CDuiString strPercent;
-		strPercent.Format(_T("%s%%"), provalue);
+		strPercent.Format(_T("%s"), provalue);
 		pPercent->SetText(strPercent);
 	}
 }

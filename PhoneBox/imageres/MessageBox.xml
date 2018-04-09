@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="380,198" caption="0,0,0,40" roundcorner="2,2,2,2" showshadow="true" shadowimage="shadow.png" shadowcorner="7,7,7,7">
+	<Font name="微软雅黑" size="12" bold="false" default="true" />
+	<Font name="微软雅黑" size="14" bold="false"/>
+	<Font name="微软雅黑" size="18" bold="false"/>
+	<VerticalLayout bkcolor="#FFFFFFFF">
+		<!--标题栏-->
+		<HorizontalLayout bkcolor="#FF2D87ED" height="40">
+	
+			<Label name="label_box_title" textpadding="15,5,0,0" font="8" autocalcwidth="true" textcolor="#FFFFFFFF"/>
+			<Control />
+			<Button name="btn_box_close" width="25" height="23" normalimage="file='close.png' source='0,0,25,23'" hotimage="file='close.png' source='0,23,25,46'" pushedimage="file='close.png' source='0,46,25,69'"/>
+		</HorizontalLayout>
+		
+		<Control height="20" />
+		
+		<HorizontalLayout height = "60">
+			<Control width = "20"/>
+			<VerticalLayout width = "30">
+				<Control />
+				<Label width = "30" height = "30" bkimage="file='warn.png'"/>
+				<Control />
+			</VerticalLayout>
+			<VerticalLayout>
+				<Control height="18" />	
+				<Text name="text_box_tip" text="您确定要退出电话宝安装程序吗？"  height = "30" wordbreak="true" textcolor="#FF787878"  align="left" font="1" mouse="false"/>
+				<Control />
+			</VerticalLayout>
+			<Control width = "20" />
+		</HorizontalLayout>
+			<Control />
+			<HorizontalLayout height="32">
+				<Control />
+				<Button name="btn_box_yes" text="确定" font="5"  width="80" textcolor="#FFFFFFFF" normalimage="file='btn_blue.png' corner='5,5,5,5' source='0,0,120,34'" hotimage="file='btn_blue.png' corner='5,5,5,5' source='0,34,120,68'" pushedimage="file='btn_blue.png' corner='5,5,5,5' source='0,68,120,102'" />
+				<Control width="12"/>
+				<Button name="btn_box_no" text="取消" font="5"  width="80" normalimage="file='btn_gray.png' corner='5,5,5,5' source='0,0,120,34'" hotimage="file='btn_gray.png' corner='5,5,5,5' source='0,34,120,68'" pushedimage="file='btn_gray.png' corner='5,5,5,5' source='0,68,120,102'" />
+				<Control width="24"/>
+			</HorizontalLayout>
+			<Control height="10" />
+	</VerticalLayout>
+</Window>
+

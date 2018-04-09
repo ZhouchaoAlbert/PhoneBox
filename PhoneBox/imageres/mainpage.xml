@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Windows>
+	<Default name="CheckBox" value="normalimage=&quot;file='cherkbox01.png' source='0,0,15,15' dest='0,0,15,15'&quot; hotimage=&quot;file='cherkbox01.png' source='0,15,15,30' dest='0,0,15,15'&quot; pushedimage=&quot;file='cherkbox01.png' source='0,30,15,45' dest='0,0,15,15'&quot; selectedimage=&quot;file='cherkbox01.png' source='0,45,15,60' dest='0,0,15,15'&quot;"/>
+    <VerticalLayout name="main" width="480" height="340" bkcolor="#FFFFFFFF">
+	  
+	  <!--标题和背景图-->
+	  <VerticalLayout height="200"   bkimage="bk_main.png">
+			<HorizontalLayout height ="30" >
+				<Control />
+				<HorizontalLayout height="23" width="25">
+					<Button name="btn_close" width="25" height="23" normalimage="file='close.png' source='0,0,25,23'" hotimage="file='close.png' source='0,23,25,46'" pushedimage="file='close.png' source='0,46,25,69'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+		</VerticalLayout >
+		<Control height="10" />
+		
+		<!--安装路径-->
+		<HorizontalLayout height="12">
+			<Control width ="18" />
+		    <Label name="label_install_pos" text="安装位置" font="0" textcolor="#FF4D4D4D" width="50"/>
+		</HorizontalLayout>
+		<Control height="10" />
+		
+		<!--选择安装路径-->
+		<HorizontalLayout height="32">
+			<Control width ="18" />
+			<Edit  name="edt_define_path"  bordercolor="#FFBAC0C7" bordersize="1" width="390"  text=""  textcolor="#FF949494" />
+	  	    <Control />
+			<Button name="btn_define_browser" text="浏览" font="0" width="50" textcolor="#FF7E7E7E" normalimage="file='btn_white.png' corner='5,5,5,5' source='0,0,80,36'" hotimage="file='btn_white.png' corner='5,5,5,5' source='0,36,80,72'" pushedimage="file='btn_white.png' corner='5,5,5,5' source='0,72,80,108'" />
+			<Control width ="16" />
+		</HorizontalLayout>
+		<Control />
+		
+		<!--开始安装-->
+		<HorizontalLayout height="34">
+			<Control />
+			   <Button name="btn_main_install" text="开始安装" font="5"  width="120" textcolor="#FFFFFFFF" normalimage="file='btn_blue.png' corner='5,5,5,5' source='0,0,120,34'" hotimage="file='btn_blue.png' corner='5,5,5,5' source='0,34,120,68'" pushedimage="file='btn_blue.png' corner='5,5,5,5' source='0,68,120,102'" />
+			<Control />
+		</HorizontalLayout>
+		<Control />
+		
+	</VerticalLayout >
+</Windows>

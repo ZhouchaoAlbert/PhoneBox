@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+    <VerticalLayout name="unfinish_page" width="480" height="340" bkcolor="#FFFFFFFF">
+	  <!--标题和背景图-->
+	   <VerticalLayout height="200"  bkimage="bk_un_sucess.png">
+			<HorizontalLayout height ="30" >
+				<Control />
+				<HorizontalLayout height="23" width="25">
+					<Button name="btn_close" width="25" height="23" normalimage="file='close.png' source='0,0,25,23'" hotimage="file='close.png' source='0,23,25,46'" pushedimage="file='close.png' source='0,46,25,69'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+	   </VerticalLayout >
+	   <Control />	
+			
+      <Control />
+	   <!--关闭-->
+	  <HorizontalLayout height="42">
+			<Control />
+			<Button name="btn_unfinish_sure" text="关闭" font="7"  width="160" normalimage="file='btn_gray.png' corner='5,5,5,5' source='0,0,120,34'" hotimage="file='btn_gray.png' corner='5,5,5,5' source='0,34,120,68'" pushedimage="file='btn_gray.png' corner='5,5,5,5' source='0,68,120,102'" />
+			<Control />
+	  </HorizontalLayout>
+
+	  <Control height= "36"/>
+    </VerticalLayout>
+</Windows>
