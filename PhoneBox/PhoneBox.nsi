@@ -31,8 +31,8 @@ ReserveFile "${NSISDIR}\Plugins\NsisPro.dll"
 !define PRODUCT_VERSION   			"1.0.4.6"
 !define PRODUCT_SHORTCUT_NAME       "电话宝"
 !define PRODUCT_PATH      			"PhoneBox"
-!define MUI_ICON          			"imageres\install.ico"     ; 安装icon
-!define MUI_UNICON        			"imageres\uninstall2.ico"  ; 卸载icon
+!define MUI_ICON          			"imageres\setup.ico"     ; 安装icon
+!define MUI_UNICON        			"imageres\uninstall.ico"  ; 卸载icon
 
 # ===================== 安装包版本 =============================
 VIProductVersion             	    "${PRODUCT_VERSION}"
@@ -98,7 +98,7 @@ Function .onInit
 	UISkin::InitSkinEngine "$PLUGINSDIR\"  
 	
     #初始化MsgBox窗口
-    UISkin::InitMessageBox "MessageBox.xml" "label_box_title" "text_box_tip" "btn_box_close" "btn_box_yes" "btn_box_no" "install.ico"
+    UISkin::InitMessageBox "MessageBox.xml" "label_box_title" "text_box_tip" "btn_box_close" "btn_box_yes" "btn_box_no" "setup.ico"
     Pop $MessageBoxHandle 
 	
 	#检测程序是否正在运行
@@ -123,7 +123,7 @@ Function PhoneBoxPageUI
 	SetOutPath "$PLUGINSDIR"
 	File /r "imageres\*"
     ;安装主界面
-	UISkin::ShowInstallSkin "install.xml" "install.ico" "电话宝"
+	UISkin::ShowInstallSkin "install.xml" "setup.ico" "电话宝"
 	Pop $Dialog	  
     ;设置焦点
     UISkin::SetControlFocusEX "btn_main_install" 
@@ -498,7 +498,7 @@ Function un.onInit
 	UISkin::InitSkinEngine "$PLUGINSDIR\"  
 	
    ;初始化MsgBox窗口
-    UISkin::InitMessageBox "MessageBox.xml" "label_box_title" "text_box_tip" "btn_box_close" "btn_box_yes" "btn_box_no" "install.ico"
+    UISkin::InitMessageBox "MessageBox.xml" "label_box_title" "text_box_tip" "btn_box_close" "btn_box_yes" "btn_box_no" "setup.ico"
     Pop $MessageBoxHandle 
 	
     System::Call 'kernel32::CreateMutexW(i 0, i 0, t "电话宝") i .r1 ?e'
@@ -520,7 +520,7 @@ Function un.PhoneBoxPageUI
     File /r "imageres\*"
 	
     ;卸载主界面
-	UISkin::ShowInstallSkin "install.xml" "install.ico" "电话宝"
+	UISkin::ShowInstallSkin "install.xml" "setup.ico" "电话宝"
 	Pop $Dialog	  
 	
 	UISkin::ShowPageItem  "WizardTab" "3" ;显示卸载主页
