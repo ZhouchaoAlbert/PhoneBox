@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Windows>
+   <VerticalLayout name="intall" width="480" height="340" bkcolor="#FFFFFFFF">
+   	  <!--标题和背景图-->
+	   <VerticalLayout height="179"   bkimage="bk_install.png">
+			<HorizontalLayout height ="30" >
+				<Control />
+				<HorizontalLayout height="23" width="25">
+					<Button name="btn_close" width="25" height="23" normalimage="file='close.png' source='0,0,25,23'" hotimage="file='close.png' source='0,23,25,46'" pushedimage="file='close.png' source='0,46,25,69'"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+		</VerticalLayout >
+		
+	  <Control height="3" />
+	  <!--进度条显示-->
+	  <HorizontalLayout height ="10">
+		 <Progress name="install_define_progress"  width="480"   height="5" bkcolor="#FFDEDEDE" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progressbar.png" min="0" max="100" value="1" hor="true"/>
+	  </HorizontalLayout>
+	  <Control />
+	   
+	   <!--进度百分比-->
+	  <HorizontalLayout  height="36">
+	  	<Control  />
+		<Label text="1" name="intall_percent" width="50"  textcolor="#FF565656" font="6" align="right" />
+		<Label text="%" width="15" textpadding="0,15,0,0" textcolor="#FF565656" font="0" align="left" />
+		<Control  />
+	  </HorizontalLayout>
+	  <Control />
+
+	</VerticalLayout >
+</Windows>

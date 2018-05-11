@@ -2,7 +2,7 @@
 <Windows>
 	<VerticalLayout name="unmain_page" width="480" height="340" bkcolor="#FFFFFFFF">
 	  <!--标题和背景图-->
-	   <VerticalLayout height="200"  bkimage="bk_un_main.png">
+	   <VerticalLayout height="180"  bkimage="bk_un_main.png">
 			<HorizontalLayout height ="30" >
 				<Control />
 				<HorizontalLayout height="23" width="25">
