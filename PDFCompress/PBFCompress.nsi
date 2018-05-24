@@ -28,7 +28,7 @@ ReserveFile "${NSISDIR}\Plugins\NsisPro.dll"
 
 ; 名称宏定义
 !define PRODUCT_NAME      			"YSPDFTool"
-!define PRODUCT_VERSION   			"1.0.0.0"
+!define PRODUCT_VERSION   			"1.0.0.4"
 !define PRODUCT_SHORTCUT_NAME       "悦书PDF工具"
 !define PRODUCT_PATH      			"YSPDFTool"
 !define MUI_ICON          			"imageres\setup2.ico"     ; 安装icon
@@ -348,7 +348,7 @@ FunctionEnd
 
 ;立即体验
 Function OnExpressBtnFunc 
-    ExecShell "" "$INSTDIR\PDFReduce.exe"
+    ExecShell "" "$INSTDIR\Bin\PDFReduce.exe"
     ;退出皮肤进程
     UISkin::ExitSkinEngine 
 FunctionEnd
